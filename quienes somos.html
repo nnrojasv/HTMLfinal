@@ -4,80 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quienes Somos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header>
-        <h1>Esta es una pagina de prueba</h1>
-        <img src="" alt="">
+    <div class="fondo2">
+        <header>
+            <div class="logo-container">
+                <img src="img/logo.jpg" alt="logo">
+                <h4 class="logo">Lontras<br>Felinas</h4>
+            </div>
+            <nav class="nav-links">
+                <li><a href="Index.html" class="nav-link ">Inicio</a></li>
+                <li><a href="quienes somos.html" class="nav-link active">Nosotros</a></li>
+                <li><a href="contenido1.html" class="nav-link">Chungungo</a></li>
+                <li><a href="contenido2.html" class="nav-link">Amenazas</a></li>
+                <li><a href="contenido3.html" class="nav-link">Soluciones</a></li>
+                <li><a href="contenido4.html" class="nav-link">Avistamientos</a></li>
+               
+    
+            </nav>
+        </header>
+        <nav role="navigation" class="hamburguesa">
+            <div id="menuToggle">
+             
+              <input type="checkbox" />
+              
+             
+              <span></span>
+              <span></span>
+              <span></span>
+              
+            
+              <ul id="menu">
+                <li><a href="Index.html" class="nav-link ">Inicio</a></li>
+                    <li><a href="quienes somos.html" class="nav-link">Nosotros</a></li>
+                    <li><a href="contenido1.html" class="nav-link">Chungungo</a></li>
+                    <li><a href="contenido2.html" class="nav-link active">Amenazas</a></li>
+                    <li><a href="contenido3.html" class="nav-link">Soluciones</a></li>
+                    <li><a href="contenido4.html" class="nav-link">Avistamientos</a></li>
+              </ul>
+            </div>
+          </nav>
+     
+        
+  
 <br>
-        <nav>
-            <ul>
-                <div>
-                    <li><a href="Inicio.html">Inicio</a></li>
-                    <li><a href="quienes somos.html">Quienes Somos</a></li>
-                    <li><a href="contenido1.html">Pagina 1</a></li>
-                    <li><a href="contenido2.html">Pagina 2</a></li>
-                    <li><a href="contenido3.html">Pagina 3</a></li>
-                    <li><a href="contenido4.html">Pagina 4</a></li>
-                    
-                </div>
-
-                <div id="login">
-                    <li><a href="registro.html">Registrate</a></li>
-                    <li id="login"><a href="login.html">Login</a></li>
-                    <li id="cerrarsesion"><a href="cierre sesion.html">Cerrar Sesion</a></li>
-                </div>
-            </ul>
-        </nav>
-    </header>
-
     <main>
-        <section class="presentaciones">
-            <article>
-                <h3>Mirco</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veniam deleniti, quod voluptatibus laudantium omnis nisi voluptatum tempore nobis, hic, ducimus iusto. Nesciunt necessitatibus animi dolorem a est sit ratione.</p>
+        <h1 class="titulo">Sobre nosotros</h1>
+        <section class="articulos">
+            
+            <article class="about">
+                <img src="img/lontra 1.jpg">
+                <h3>Mirco - FrontEnd </h3>
+                <p>
+                    Soy un tecnico programador titulado del instituto profesional aiep. 
+                    He dedicado varios años a la informatica. Nacido en la ciudad jardin, criado en 
+                    los frios de magallanes y el olor a pescado de Valparaiso. Actualmente vivo en Limache.
+                </p>
+                <hr>
             </article>
-            <article>
-                <h3>Caro</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum voluptates aliquid officiis explicabo quasi illum dolores obcaecati asperiores voluptate cumque sequi delectus velit animi nemo similique in, voluptatibus impedit dolore?</p>
+            
+            <article class="about" >
+                <img src="img/lontra2.jpg">
+                <h3>Caro - Diseñadora</h3>
+                <p>
+                   Voluntaria de las naciones unidas durante 6 años, ejerciendo el rol de diseñadora web,
+                   usando programas como adobeFlash. Hablo 3 idiomas: castellano, ingles y frances. He viajado
+                   por muchos paises por mi labor de voluntaria.
+                </p>
+                <hr>
         </article>
-            <article>
-                <h3>Nadia</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolorem eveniet perferendis molestias quia mollitia repudiandae, autem explicabo modi excepturi sed laborum exercitationem quasi adipisci similique quo tempore! Ad, corporis.</p>
+            <article class="about">
+                <img src="img/lontra3.jpg">
+                <h3>Nadia -  Jefa de proyecto</h3>
+                <p>
+                    Sociologa de la universidad de playa ancha. Actual estudiante de programacion en java.
+                    Buscando concientizar acerca de la responsabilidad que tenemos de cudiar a las especies
+                    endemicas de nuestro pais.
+                </p>
+                <hr>
             </article>
         </section>
     </main>
-
+</div>
     <footer>
-        <div class="info">
-            <div id="info">
-            Derechos Reservados
-        </div>
-        </div>
-        <div class="contacto">
-            <form action="post">
-                <div>
-                    <div>
-                        <h3>Contactanos</h3>
-                    </div>
-                    
-                    <div>
-                        <div>
-                            Nombre <input type="text" name="nombre" id="nombre"> <br>
-                            Correo <input type="email" name="correo" id="correo"> <br>
-
-                            <div>
-                                Mensaje : <br>
-                                <textarea name="mensaje" id="mensaje" cols= "60" rows="4"></textarea>
-                            </div>
-                            <div>
-                                <button id="enviar">Enviar</button>
-                            </div>
-                        </div>
-                    </div>
-            </form>
-        </div>
+        <h3>Lontra felina</h3>
     </footer>
 </body>
 </html>

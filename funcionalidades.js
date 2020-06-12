@@ -1,69 +1,62 @@
 
-(function($){
+//pagina 4 
+$(document).ready(function () {
+$(document).ready(function() {
+  $("#tablaregistro").DataTable();
+} );
 
-    $(document).ready(function() {
-        var editor = new $.fn.dataTable.Editor( {
-            ajax: '/api/Avistamiento',
-            table: '#Avistamiento',
-            fields: [
-                {
-                    "label": "Nombre:",
-                    "name": "nombre"
-                },
-                {
-                    "label": "Fecha:",
-                    "name": "fecha",
-                    "type": "datetime",
-                    "format": "DD-MM-YY"
-                },
-                {
-                    "label": "Hora:",
-                    "name": "hora",
-                    "type": "datetime",
-                    "format": "HH:mm"
-                },
-                {
-                    "label": "Lugar:",
-                    "name": "lugar"
-                },
-                {
-                    "label": "Cantidad:",
-                    "name": "cantidad"
-                }
-            ]
-        } );
+$(document).ready(function() {
+  $("#misregistros").DataTable();
+} );
+
+$(document).ready(function() {
+  $("#todoregistro").DataTable();
+} );
+
+
+  $(function () {
+    $("#tabs").tabs();
+  });//agrega pestañas para tablas
+
+
+
+  $("#dialog").dialog({
+    autoOpen: false,
+    show: {
+      effect: "blind",
+      duration: 1000
+    },
+    hide: {
+      effect: "explode",
+      duration: 1000
+    }
+  });
+  var N = 1
+  $("#nuevaentrada").on("click", function () {
+    N = N+1;
+    var nombre = $('input:text[name=nuevonombre]').val();
+    var fecha = document.getElementById("nuevafecha").value ;
+    var hora = document.getElementById("nuevahora").value;
+    var lugar = $('input:text[name=nuevolugar]').val();
+    var cant =document.getElementById("nuevacant").value;
+   
+    $("#dialog").dialog("open");
     
-        var table = $('#Avistamiento').DataTable( {
-            ajax: '/api/Avistamiento',
-            columns: [
-                {
-                    "data": "nombre"
-                },
-                {
-                    "data": "fecha"
-                },
-                {
-                    "data": "hora"
-                },
-                {
-                    "data": "lugar"
-                },
-                {
-                    "data": "cantidad"
-                }
-            ],
-            select: true,
-            lengthChange: false
-        } );
-    
-        new $.fn.dataTable.Buttons( table, [
-            { extend: "nuevafila", editor: editor },
-            
-        ] );
-    
-        table.buttons().container()
-            .prependTo( $('div.fg-toolbar:eq(0)', table.table().container() ) );
-    } );
-    
-    }(jQuery));
-    
+    var nuevafila = "<tr> <td>" + N + "</td> <td>" + nombre + "</td> <td>" + fecha + "</td> <td>" + hora + "</td> <td>" + lugar + "</td> <td>" + cant + "</tr> </tr>";
+
+
+    $("#tablaregistro").append(nuevafila);
+    $("#misregistros").append(nuevafila);
+    $("#todoregistro").append(nuevafila);
+  });//muestra mensaje para iniciar sesion y agrega registro a tablas
+
+//pagina 4 hasta aqui
+
+//pagina 2
+$( function() {
+  $( "#accordion" ).accordion();
+} );
+
+// pagina 2 hasta aqui
+
+})
